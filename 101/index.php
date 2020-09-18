@@ -21,7 +21,7 @@ foreach ($config_data as $key => $value) {
     $config_data[$key] = json_decode($value);
 }
 
-//获取网站tdk
+//获取网页tdk
 $web = 'wenti';
 $tdk_url = $api."config/getTdk?web=$web";
 $tdk_info = file_get_contents($tdk_url);
@@ -58,12 +58,12 @@ if (!$tdk_info['success']) {
           <div class="nav fr">
               <ul>
                 <li class="active"><a href="index.php">首页</a></li>
-                <li><a href="proservice.html">产品服务</a></li>
-                <li><a href="#">健步走</a></li>
-                <li><a href="#">俱乐部</a></li>
-                <li><a href="pinpai.html">品牌介绍</a></li>
-                <li><a href="new.html">新闻动态</a></li>
-                <li><a href="concat.html">联系我们</a></li>
+                <li><a href="proservice.php">产品服务</a></li>
+                <li><a href=<?php echo $config['jianbu_domian'] ?>>健步走</a></li>
+                <li><a href=<?php echo $config['club_domian'] ?>>俱乐部</a></li>
+                <li><a href="pinpai.php">品牌介绍</a></li>
+                <li><a href="new.php">新闻动态</a></li>
+                <li><a href="concat.php">联系我们</a></li>
               </ul>
           </div>
           <div class="menu fr">
@@ -363,8 +363,8 @@ if (!$tdk_info['success']) {
     <div class="ix_youqing container">
       <ul>
         <li><span>友情链接：</span></li>
-        <li><a href="#">优企健步走</a></li>
-        <li><a href="#">优企俱乐部</a></li>
+          <li><a href=<?php echo $config['jianbu_domian'] ?>>健步走</a></li>
+          <li><a href=<?php echo $config['club_domian'] ?>>俱乐部</a></li>
       </ul>
     </div>
 </div>

@@ -1,12 +1,26 @@
+<?php
+//获取网站tdk
+require_once '../inc_config.php';
+$api = $config['api'];
+
+$web = 'wenti';
+$tdk_url = $api."config/getTdk?web=$web";
+$tdk_info = file_get_contents($tdk_url);
+$tdk_info = json_decode($tdk_info, true);
+if (!$tdk_info['success']) {
+    echo '数据有误';
+    die();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <link href="/favicon.ico" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>文体之家</title>
-    <meta name="keywords" content="关键词">
-    <meta name="description" content="描述">
+    <title><?php echo $tdk_info['data']['title'] ?></title>
+    <meta name="keywords" content=<?php echo $tdk_info['data']['keywords']?>>
+    <meta name="description" content=<?php echo $tdk_info['data']['description']?>>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -23,12 +37,12 @@
         <div class="nav fr">
             <ul>
               <li><a href="index.php">首页</a></li>
-              <li class="active"><a href="proservice.html">产品服务</a></li>
-              <li><a href="#">健步走</a></li>
-              <li><a href="#">俱乐部</a></li>
-              <li><a href="pinpai.html">品牌介绍</a></li>
-              <li><a href="new.html">新闻动态</a></li>
-              <li><a href="concat.html">联系我们</a></li>
+              <li class="active"><a href="proservice.php">产品服务</a></li>
+                <li><a href=<?php echo $config['jianbu_domian'] ?>>健步走</a></li>
+                <li><a href=<?php echo $config['club_domian'] ?>>俱乐部</a></li>
+              <li><a href="pinpai.php">品牌介绍</a></li>
+              <li><a href="new.php">新闻动态</a></li>
+              <li><a href="concat.php">联系我们</a></li>
             </ul>
         </div>
         <div class="menu fr">
@@ -44,12 +58,12 @@
         <div class="swiper-container">
            <div class="swiper-wrapper">
                <div class="swiper-slide"><a href="#">全部</a></div>
-              <div class="swiper-slide active"><a href="proservice.html">文体汇</a></div>
-              <div class="swiper-slide"><a href="#">健步走</a></div>
-              <div class="swiper-slide"><a href="#">俱乐部</a></div>
-              <div class="swiper-slide"><a href="Class.html">精品课</a></div>
-              <div class="swiper-slide"><a href="rongyu.html">荣誉堂</a></div>
-              <div class="swiper-slide"><a href="tuangou.html">惠团购</a></div>
+              <div class="swiper-slide active"><a href="proservice.php">文体汇</a></div>
+              <div class="swiper-slide"><a href=<?php echo $config['jianbu_domian'] ?>>健步走</a></div>
+              <div class="swiper-slide"><a href=<?php echo $config['club'] ?>>俱乐部</a></div>
+              <div class="swiper-slide"><a href="Class.php">精品课</a></div>
+              <div class="swiper-slide"><a href="rongyu.php">荣誉堂</a></div>
+              <div class="swiper-slide"><a href="tuangou.php">惠团购</a></div>
            </div>
            <!-- Add Arrows -->
            <div class="swiper-button-next"><img src="images/8219.png"></div>
@@ -87,7 +101,7 @@
               <div class="pro_sta">
                   <h1>天籁之音</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -99,7 +113,7 @@
               <div class="pro_sta">
                   <h1>健康分享</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -111,7 +125,7 @@
               <div class="pro_sta">
                   <h1>绘声绘影</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -123,7 +137,7 @@
               <div class="pro_sta">
                   <h1>职场达人</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -135,7 +149,7 @@
               <div class="pro_sta">
                   <h1>铿锵玫瑰</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -148,7 +162,7 @@
               <div class="pro_sta">
                   <h1>智勇双全</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -162,7 +176,7 @@
               <div class="pro_sta">
                   <h1>书香瑰宝</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -174,7 +188,7 @@
               <div class="pro_sta">
                   <h1>巧手灵心</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -186,7 +200,7 @@
               <div class="pro_sta">
                   <h1>藏品共赏</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -198,7 +212,7 @@
               <div class="pro_sta">
                   <h1>妙笔丹青</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -210,7 +224,7 @@
               <div class="pro_sta">
                   <h1>奇技淫巧</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -223,7 +237,7 @@
               <div class="pro_sta">
                   <h1>热血男儿</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -235,7 +249,7 @@
               <div class="pro_sta">
                   <h1>天伦之乐</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -248,7 +262,7 @@
               <div class="pro_sta">
                   <h1>视觉盛宴</h1>
                   <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.html">点此链接详情 ></a>
+                  <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
@@ -364,8 +378,8 @@
     <div class="ix_youqing container">
       <ul>
         <li><span>友情链接：</span></li>
-        <li><a href="#">优企健步走</a></li>
-        <li><a href="#">优企俱乐部</a></li>
+          <li><a href=<?php echo $config['jianbu_domian'] ?>>健步走</a></li>
+          <li><a href=<?php echo $config['club_domian'] ?>>俱乐部</a></li>
       </ul>
     </div>
 </div>

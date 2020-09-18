@@ -1,12 +1,28 @@
+
+<?php
+//获取网站tdk
+require_once '../inc_config.php';
+$api = $config['api'];
+
+$web = 'wenti';
+$tdk_url = $api."config/getTdk?web=$web";
+$tdk_info = file_get_contents($tdk_url);
+$tdk_info = json_decode($tdk_info, true);
+if (!$tdk_info['success']) {
+    echo '数据有误';
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <link href="/favicon.ico" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>文体之家</title>
-    <meta name="keywords" content="关键词">
-    <meta name="description" content="描述">
+    <title><?php echo $tdk_info['data']['title'] ?></title>
+    <meta name="keywords" content=<?php echo $tdk_info['data']['keywords']?>>
+    <meta name="description" content=<?php echo $tdk_info['data']['description']?>>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -23,12 +39,12 @@
         <div class="nav fr">
             <ul>
               <li><a href="index.php">首页</a></li>
-              <li><a href="proservice.html">产品服务</a></li>
-              <li><a href="#">健步走</a></li>
-              <li><a href="#">俱乐部</a></li>
-              <li><a href="pinpai.html">品牌介绍</a></li>
-              <li class="active"><a href="new.html">新闻动态</a></li>
-              <li><a href="concat.html">联系我们</a></li>
+              <li><a href="proservice.php">产品服务</a></li>
+                <li><a href=<?php echo $config['jianbu_domian'] ?>>健步走</a></li>
+                <li><a href=<?php echo $config['club_domian'] ?>>俱乐部</a></li>
+              <li><a href="pinpai.php">品牌介绍</a></li>
+              <li class="active"><a href="new.php">新闻动态</a></li>
+              <li><a href="concat.php">联系我们</a></li>
             </ul>
         </div>
         <div class="menu fr">
@@ -172,8 +188,8 @@
     <div class="ix_youqing container">
       <ul>
         <li><span>友情链接：</span></li>
-        <li><a href="#">优企健步走</a></li>
-        <li><a href="#">优企俱乐部</a></li>
+          <li><a href=<?php echo $config['jianbu_domian'] ?>>健步走</a></li>
+          <li><a href=<?php echo $config['club_domian'] ?>>俱乐部</a></li>
       </ul>
     </div>
 </div>

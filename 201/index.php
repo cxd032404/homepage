@@ -1,12 +1,47 @@
+<?php
+//获取网站tdk
+    require_once '../inc_config.php';
+    $api = $config['api'];
+
+    $params = [
+        'customer'
+    ];
+
+    $params = json_encode($params);
+
+    $api = $config['api'];
+
+    $url = $api."config/getConfig?params=$params";
+    $data = file_get_contents($url);
+    $data = json_decode($data, true);
+    if (!$data['success']) {
+        echo "数据有误";
+        die();
+    }
+    $config_data = $data['data'];
+
+    foreach ($config_data as $key => $value) {
+        $config_data[$key] = json_decode($value);
+    }
+
+    $web = 'jianbu';
+    $tdk_url = $api."config/getTdk?web=$web";
+    $tdk_info = file_get_contents($tdk_url);
+    $tdk_info = json_decode($tdk_info, true);
+    if (!$tdk_info['success']) {
+        echo '数据有误';
+        die();
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <link href="/favicon.ico" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>线上健步走活动_企业健步走活动_健步走活动策划_线上健步走比赛|文野文化</title>
-    <meta name="keywords" content="线上健步走活动，线上健步走，线上健步走比赛，线上健步走小程序，健步走活动方案策划.">
-    <meta name="description" content="文野文化为企业提供员工文体活动在线解决方案—线上健步走活动，员工参与线上健步走活动，线下走路，线上比赛，团队部门PK，联合闯关。">
+    <title><?php echo $tdk_info['data']['title'] ?></title>
+    <meta name="keywords" content=<?php echo $tdk_info['data']['keywords']?>>
+    <meta name="description" content=<?php echo $tdk_info['data']['description']?>>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/swiper.min.css">
@@ -19,16 +54,16 @@
 <div class="head container-fluid">
     <div class="headtop container">
         <div class="logo fl">
-          <a href="index.html"><img src="images/logo.png" alt=""></a>
+          <a href="index.php"><img src="images/logo.png" alt=""></a>
         </div>
         <div class="freeico fr">
           <img src="images/80102.png" alt="">
         </div>
         <div class="headnav fr">
             <ul>
-              <li class="active"><a href="index.html">首页</a></li>
-              <li><a href="case.html">服务案例</a></li>
-              <li><a href="#">关于我们</a></li>
+              <li class="active"><a href="index.php">首页</a></li>
+              <li><a href="case.php">服务案例</a></li>
+              <li><a href=<?php echo $config['wenti_domian'].'/concat.php' ?>>关于我们</a></li>
               <li><a href="#">资讯</a></li>
             </ul>
         </div>
@@ -239,7 +274,7 @@
 <div class="fuwus container-fluid">
     <div class="fwtit   wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".5s">
         <h1>期待您成为下一个我们热忱服务的客户</h1>
-        <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX监测统计员工每日步数 <br> 设置周/月/季度任务目标 挑战成功发放奖励</p>
+        <p>监测统计员工每日步数 <br> 设置周/月/季度任务目标 挑战成功发放奖励</p>
     </div>
 
     <div class="fuwu_count container">
@@ -273,7 +308,7 @@
 
 
     <div class="lxwmbtn">
-        <a href="#">联系我们</a>
+        <a href=<?php echo $config['wenti_domian'].'/concat.php' ?>>联系我们</a>
     </div>
 
     <!-- //logo -->
@@ -281,36 +316,12 @@
     <div class="loglist container">
       <div class="swiper-container">
           <div class="swiper-wrapper">
+              <?php foreach ($config_data['customer'] as $pic_info) { ?>
             <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
+              <img src=<?php echo $pic_info->img_url ?> alt="">
             </div>
-            <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="images/gsde.png" alt="">
-            </div>
+              <?php } ?>
+
           </div>
       </div>
 
@@ -373,7 +384,7 @@
           <h3   class="wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".5s">你还在犹豫什么？</h3>
           <h1  class="wow fadeInUp"  data-wow-duration="1s" data-wow-delay="1s">企业健步走免费工具</h1>
           <div  class="wow fadeInUp"  data-wow-duration="1s" data-wow-delay="1.5s">
-            <img src="images/imsagffe.png">
+            <img src="/images/ewm1.png">
             <p>微信扫码,免费使用</p>
           </div>
     </div>

@@ -1,12 +1,26 @@
+<?php
+//获取网站tdk
+require_once '../inc_config.php';
+$api = $config['api'];
+
+$web = 'wenti';
+$tdk_url = $api."config/getTdk?web=$web";
+$tdk_info = file_get_contents($tdk_url);
+$tdk_info = json_decode($tdk_info, true);
+if (!$tdk_info['success']) {
+    echo '数据有误';
+    die();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <link href="/favicon.ico" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>健步走</title>
-    <meta name="keywords" content="关键词">
-    <meta name="description" content="描述">
+    <title><?php echo $tdk_info['data']['title'] ?></title>
+    <meta name="keywords" content=<?php echo $tdk_info['data']['keywords']?>>
+    <meta name="description" content=<?php echo $tdk_info['data']['description']?>>
     <link rel="stylesheet" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/swiper.min.css">
@@ -19,16 +33,16 @@
 <div class="head container-fluid">
     <div class="headtop container">
         <div class="logo fl">
-          <a href="index.html"><img src="images/logo.png" alt=""></a>
+          <a href="index.php"><img src="images/logo.png" alt=""></a>
         </div>
         <div class="freeico fr">
           <img src="images/80102.png" alt="">
         </div>
         <div class="headnav fr">
             <ul>
-              <li><a href="index.html">首页</a></li>
-              <li class="active"><a href="case.html">服务案例</a></li>
-              <li><a href="#">关于我们</a></li>
+              <li><a href="index.php">首页</a></li>
+              <li class="active"><a href="case.php">服务案例</a></li>
+                <li><a href=<?php echo $config['wenti_domian'].'/concat.php' ?>>关于我们</a></li>
               <li><a href="#">资讯</a></li>
             </ul>
         </div>
@@ -292,9 +306,9 @@
             <p>电话：400-000-000 </p>
             <p>邮箱：wentizc@163.com</p>
             <div class="share_ico">
-              <span><img src="images/cse.png"></span>
-              <span><img src="images/cse.png"></span>
-              <span><img src="images/cse.png"></span>
+              <span><img src="images/022.png"></span>
+              <span><img src="images/80033.png"></span>
+              <span><img src="images/0042.png"></span>
             </div>
         </div>
     </div>
