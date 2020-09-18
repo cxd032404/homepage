@@ -68,7 +68,7 @@ if (!$tdk_info['success']) {
        </div>
     </div>
     <div class="pp_rt fr  wow fadeInRight">
-        <img src="images/2853.png" alt="品牌介绍"  >
+        <img src="images/2854.png" alt="品牌介绍"  >
     </div>
   </div>
 </div>
