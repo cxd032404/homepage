@@ -1,0 +1,108 @@
+.menu{display: none;width: 21px;height: auto;margin-top: 15px;}
+.menu span{display: block;height: 2px;width: 100%;margin: 5px 0px;background: #3678E1;}
+
+@media screen and (max-width:1500px){
+
+  .act_s_a  img{width: 75%;height: auto;}
+  .ama h1{margin: 100px 0px;}
+  .ama h1{font-size: 38px;}
+
+}
+@media screen and (max-width:1300px){
+
+  .act_s_a  img{width: 65%;height: auto;}
+.nrcont_a .act_s:nth-child(2n) .act_s_b{margin-left: 4%;}
+.footers{padding-bottom: 20px;}
+.oursers{padding: 100px 0px;}
+.sertit h1{font-size: 45px;}
+
+
+}
+@media screen and (max-width:768px){
+  .logo img{height: 40px;}
+  .container{width: 95%;}
+  .headnav {display: none;}
+  .menu{display: block;margin-top: 11px;}
+  .freeico {display: none;}
+  .head{height: 45px;line-height: 45px;position: fixed;top: 0;left: 0;width: 100%;z-index: 999;background: #fff;padding: 0px;}
+  body{padding-top: 45px;}
+
+  .am_pb {position: static;width: 100%;margin-bottom: 40px;}
+  .am_pb img{width: 70px;height: auto;animation:none!important;margin-bottom: 20px;display: inline-block;float: left;margin-right: 10px;}
+  .bm_pb {display: none;}
+  .ama h1{font-size: 22px;margin: 40px 0px;}
+  .nrcont_bg{display: none;}
+  .nr_cont_nr{position: static;transform:none;}
+  .am{height: auto;}
+  .act_s_b{margin: 0px;margin-top: 30px;width: 100%;text-align: center;}
+  .act_s_a img{width: 100%;}
+  .act_s_b p{width: 100%;text-align: center;}
+  .act_s_b{float: left !important;margin-bottom: 25px;}
+  .act_s_b h1 img{display: none;}
+  .act_s_b h1{font-size: 28px;margin-bottom: 20px;}
+  .newdt{padding-top: 20px;border-top: 1px solid #ccc;}
+  .newdt_ct ul li{width: 100%;}
+  .newdt_tit{margin-bottom: 20px;}
+  .newdt_tit p{font-size: 18px;}
+  .newdt_tit h1{font-size: 28px;}
+  .newdt{padding-bottom: 0px;}
+  .weyy_nr h1{color: #000;font-size: 28px;margin-bottom: 40px;}
+  .weyy{background: none;}
+  .weyy_nr ul li{width: 100%;box-shadow: 0 0 5px 5px #f6f6f6;border-radius: 10px;margin-bottom: 25px;}
+  .weyy_nr ul li h2{font-size: 32px;}
+  .weyy_nr ul li .ovh{padding: 10px 0px;}
+  .weyy{padding: 45px 0;}
+  .rangn h2{font-size:  28px;width: 70%;margin: 0 auto;}
+  .footers{padding: 50px 0px;}
+  .rangn{padding: 80px 0px;}
+  .foot_a{width: 100%;}
+  .foot_b{width: 100%;height: auto;border: none;padding-left: 0px;padding: 20px 0px;}
+  .foot_b  ul li{float: left;margin-right: 16px;}
+  .foot_a img{height: 80px;width: auto;margin: 0 auto;}
+  .foot_a {text-align: center;}
+    .foot_c{width: 100%;}
+  .foot_c  h3{font-size: 18px;}
+  .erwm ul li:last-child{margin-right: 0px;}
+  .copy{height: 50px;line-height: 50px;}
+  .copy p{line-height: 50px;}
+  .footers{padding-bottom: 20px;}
+  .am_pb {animation: none !important;opacity: 1;}
+  .am_pb h3{margin-bottom: 8px;    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #1D293F;
+    line-height: 17px;}
+  .am_pb img{margin-top: -2px;}
+  .am_pb p {font-size: 14px;line-height: 22px;}
+.nrcont_a{margin-top: 50px;}
+
+.headnav {position: fixed;top: 45px;background: #fff;left: 0px;width: 100%;}
+.headnav ul li{margin-right: 0px;width: 100%;text-align: center;}
+.oursers{padding: 50px 0px;}
+.sertit h1{font-size: 28px;}
+.youshiIMG{margin-top: 40px;}
+.sertit p{margin-top: 10px;}
+.yures ul li{width: 50%;}
+.yurdiv{width: 120px;height: 120px;line-height: 120px;}
+.yurdiv::before{background: none;}
+.yurdiv img{width: 40px;height: auto;}
+.yures ul li p{font-size: 18px;margin-top: 15px;margin-bottom: 15px;}
+.yures{margin-top: 30px;}
+.xiangq{margin-top: 40px;}
+.xiangq a{font-size: 16px;width: 180px;height: 45px;line-height: 45px;}
+.hyyss{padding: 45px 0px;}
+.sertit{text-align: center;}
+.sertit p{width: 70%;margin: 0 auto;}
+.jiaofu{margin-top: 10px;padding: 0px;}
+.jiaofu ul li{width: 100%;height: auto;}
+.jfnr{padding: 10px 0px;}
+.jiaofu_b{width: 50%;}
+.jiaofu_b h1{font-size: 22px; line-height: 35px;}
+.yhqlist ul li{width: 100%;height: auto;padding: 0px;margin-bottom: 30px;}
+.tuan_s h1{margin-top: 20px;font-size: 28px;}
+.yhquns{margin-bottom: 20px;}
+.foot_a p{text-align: left;}
+.footers{padding-top: 30px;}
+
+
+}
