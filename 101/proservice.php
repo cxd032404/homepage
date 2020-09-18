@@ -1,16 +1,37 @@
 <?php
 //获取网站tdk
-require_once '../inc_config.php';
-$api = $config['api'];
+    require_once '../inc_config.php';
+    $api = $config['api'];
 
-$web = 'wenti';
-$tdk_url = $api."config/getTdk?web=$web";
-$tdk_info = file_get_contents($tdk_url);
-$tdk_info = json_decode($tdk_info, true);
-if (!$tdk_info['success']) {
-    echo '数据有误';
-    die();
-}
+    //获取图片列表
+    $params = [
+        'product_service_pic'
+    ];
+
+    $params = json_encode($params);
+
+    $api = $config['api'];
+
+    $url = $api."config/getConfig?params=$params";
+    $data = file_get_contents($url);
+    $data = json_decode($data, true);
+    if (!$data['success']) {
+        echo "数据有误";
+        die();
+    }
+    $config_data = $data['data'];
+    foreach ($config_data as $key => $value) {
+        $config_data[$key] = json_decode($value);
+    }
+    //获取网站tdk
+    $web = 'wenti';
+    $tdk_url = $api."config/getTdk?web=$web";
+    $tdk_info = file_get_contents($tdk_url);
+    $tdk_info = json_decode($tdk_info, true);
+    if (!$tdk_info['success']) {
+        echo '数据有误';
+        die();
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -93,190 +114,20 @@ if (!$tdk_info['success']) {
     </div>
     <div class="pro_cont">
         <ul>
+            <?php foreach ($config_data['product_service_pic'] as $pic_info) { ?>
           <li>
             <div class="chanplist">
               <div class="ovh">
-                <img src="images/imagae.png" alt="">
+                <img src=<?php echo $pic_info->img_url ?> alt="">
               </div>
               <div class="pro_sta">
-                  <h1>天籁之音</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
+                  <h1><?php echo $pic_info->title ?></h1>
+                  <p><?php echo $pic_info->text ?></p>
                   <a href="tianlai.php">点此链接详情 ></a>
               </div>
             </div>
           </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>健康分享</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>绘声绘影</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>职场达人</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>铿锵玫瑰</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>智勇双全</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-
-
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>书香瑰宝</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>巧手灵心</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>藏品共赏</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>妙笔丹青</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>奇技淫巧</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>热血男儿</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>天伦之乐</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>视觉盛宴</h1>
-                  <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
-                  <a href="tianlai.php">点此链接详情 ></a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="chanplist">
-              <div class="ovh">
-                <img src="images/imagae.png" alt="">
-              </div>
-              <div class="pro_sta">
-                  <h1>定制活动</h1>
-                  <p>咨询热线：400-400-000</p>
-              </div>
-            </div>
-          </li>
+            <?php } ?>
         </ul>
     </div>
 </div>

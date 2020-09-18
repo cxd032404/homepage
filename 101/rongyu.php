@@ -2,6 +2,28 @@
 //获取网站tdk
 require_once '../inc_config.php';
 $api = $config['api'];
+//获取图片列表
+$params = [
+    'honour'
+];
+
+$params = json_encode($params);
+
+$api = $config['api'];
+
+$url = $api."config/getConfig?params=$params";
+$data = file_get_contents($url);
+$data = json_decode($data, true);
+if (!$data['success']) {
+    echo "数据有误";
+    die();
+}
+$config_data = $data['data'];
+foreach ($config_data as $key => $value) {
+    $config_data[$key] = json_decode($value);
+}
+
+
 
 $web = 'wenti';
 $tdk_url = $api."config/getTdk?web=$web";
@@ -87,7 +109,7 @@ if (!$tdk_info['success']) {
     </div>
     <div class="rongyu_a container toyr_mb">
         <div class="rongyu_a_lt fl wow fadeInLeft">
-          <img src="images/image1.png">
+          <img src=<?php echo $config_data['honour'][0]->img_url ?>>
         </div>
         <div class="rongyu_a_rt roy_pb wow fadeInRight">
             <h1>企业资讯</h1>
@@ -97,7 +119,7 @@ if (!$tdk_info['success']) {
 
     <div class="rongyu_b container toyr_mb">
         <div class="rongyu_b_lt fr  wow fadeInRight">
-          <img src="images/image1.png">
+          <img src=<?php echo $config_data['honour'][1]->img_url ?>>
         </div>
         <div class="rongyu_b_rt roy_pb  wow fadeInLeft">
             <h1>企业公告</h1>
@@ -107,7 +129,7 @@ if (!$tdk_info['success']) {
 
     <div class="rongyu_a container toyr_mb  teshu_san">
         <div class="rongyu_a_lt fl  wow fadeInLeft">
-          <img src="images/image1.png">
+          <img src=<?php echo $config_data['honour'][2]->img_url ?>>
         </div>
         <div class="rongyu_a_rt roy_pb  wow fadeInRight">
             <h1>优秀员工表彰</h1>
@@ -117,7 +139,7 @@ if (!$tdk_info['success']) {
 
     <div class="rongyu_b container toyr_mb">
         <div class="rongyu_b_lt fr  wow fadeInRight">
-          <img src="images/image1.png">
+          <img src=<?php echo $config_data['honour'][3]->img_url ?>>
         </div>
         <div class="rongyu_b_rt roy_pb  wow fadeInLeft">
             <h1>文体标兵事迹</h1>

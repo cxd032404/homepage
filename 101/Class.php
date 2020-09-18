@@ -2,7 +2,27 @@
 //获取网站tdk
 require_once '../inc_config.php';
 $api = $config['api'];
+//获取图片列表
+$params = [
+    'supreme'
+];
 
+$params = json_encode($params);
+
+$api = $config['api'];
+
+$url = $api."config/getConfig?params=$params";
+$data = file_get_contents($url);
+$data = json_decode($data, true);
+if (!$data['success']) {
+    echo "数据有误";
+    die();
+}
+$config_data = $data['data'];
+foreach ($config_data as $key => $value) {
+    $config_data[$key] = json_decode($value);
+}
+//文体之窗tdk
 $web = 'wenti';
 $tdk_url = $api."config/getTdk?web=$web";
 $tdk_info = file_get_contents($tdk_url);
@@ -99,11 +119,9 @@ if (!$tdk_info['success']) {
 
   <div class="jp_cont">
     <ul>
-        <li class="wow rotateInUpLeft">  <img src="images/imag11e.png"></li>
-        <li class="wow rotateInUpLeft">  <img src="images/imag11e.png"></li>
-        <li class="wow rotateInUpLeft">  <img src="images/imag11e.png"></li>
-        <li class="wow rotateInUpLeft">  <img src="images/imag11e.png"></li>
-        <li class="wow rotateInUpLeft">  <img src="images/imag11e.png"></li>
+        <?php foreach ($config_data['supreme'] as $pic_info) { ?>
+        <li class="wow rotateInUpLeft">  <img src=<?php echo $pic_info->img_url ?>></li>
+        <?php } ?>
     </ul>
   </div>
 </div>

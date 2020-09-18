@@ -3,6 +3,26 @@
 require_once '../inc_config.php';
 $api = $config['api'];
 
+$params = [
+   'flow_pics'
+];
+
+$params = json_encode($params);
+
+$api = $config['api'];
+
+$url = $api."config/getConfig?params=$params";
+$data = file_get_contents($url);
+$data = json_decode($data, true);
+if (!$data['success']) {
+    echo "数据有误";
+    die();
+}
+$config_data = $data['data'];
+foreach ($config_data as $key => $value) {
+    $config_data[$key] = json_decode($value);
+}
+
 $web = 'wenti';
 $tdk_url = $api."config/getTdk?web=$web";
 $tdk_info = file_get_contents($tdk_url);
@@ -92,7 +112,7 @@ if (!$tdk_info['success']) {
               </div>
         </div>
         <div class="yure_rt fr  wow fadeInRight">
-          <img src="images/imasge.png">
+          <img src=<?php echo $config_data['flow_pics'][0]->img_url ?>>
         </div>
     </div>
     <div class="yure">
@@ -116,7 +136,7 @@ if (!$tdk_info['success']) {
               </div>
         </div>
         <div class="yure_rt fr  wow fadeInRight">
-          <img src="images/imasge.png">
+          <img src=<?php echo $config_data['flow_pics'][1]->img_url ?>>
         </div>
     </div>
     <div class="yure">
@@ -140,7 +160,7 @@ if (!$tdk_info['success']) {
               </div>
         </div>
         <div class="yure_rt fr   wow fadeInRight">
-          <img src="images/imasge.png">
+          <img src=<?php echo $config_data['flow_pics'][2]->img_url ?>>
         </div>
     </div>
     <div class="yure">
@@ -164,7 +184,7 @@ if (!$tdk_info['success']) {
               </div>
         </div>
         <div class="yure_rt fr   wow fadeInRight">
-          <img src="images/imasge.png">
+          <img src=<?php echo $config_data['flow_pics'][3]->img_url ?>>
         </div>
     </div>
     <div class="yure">
@@ -188,7 +208,7 @@ if (!$tdk_info['success']) {
               </div>
         </div>
         <div class="yure_rt fr   wow fadeInRight">
-          <img src="images/imasge.png">
+          <img src=<?php echo $config_data['flow_pics'][4]->img_url ?>>
         </div>
     </div>
 </div>

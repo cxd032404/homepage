@@ -142,7 +142,9 @@ function checkPhone(){
                   console.log(result);//打印服务端返回的数据(调试用)
                   if (result.code == 200) {
                       alert("电话提交成功,我们会尽快与您联系");
-                  };
+                  }else if(result.code == 201) {
+                      alert("频次过高稍后再试");
+                  }
               },
               error : function() {
                   alert("电话提交失败,请刷新页面重新提交！");
