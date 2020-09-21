@@ -136,7 +136,7 @@ function checkPhone(){
           //几个参数需要注意一下
               type: "POST",//方法类型
               dataType: "json",//预期服务器返回的数据类型
-              url: "https://www.staffhome.cn/api/user/websiteMobileSave" ,//url
+              url: "https://api.staffhome.cn/user/websiteMobileSave" ,//url
               data:{mobile:document.getElementById("mobile").value},
               success: function (result) {
                   console.log(result);//打印服务端返回的数据(调试用)
