@@ -53,6 +53,13 @@ var swiper = new Swiper('.mlas_d .swiper-container', {
       nextButton: '.mlas_d .prev',
       prevButton: '.mlas_d  .next',
     });
+var swiper = new Swiper('.loglist .swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 2,
+    speed:700,
+    nextButton: '.znext',
+    prevButton: '.zprev',
+});
 
 $(".menu ").click(function(){
   $(".headnav ").slideToggle(500);

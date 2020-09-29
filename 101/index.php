@@ -62,7 +62,7 @@ if (!$tdk_info['success']) {
                 <li><a href=<?php echo $config['jianbu_domian'] ?>>健步走</a></li>
                 <li><a href=<?php echo $config['club_domian'] ?>>俱乐部</a></li>
                 <li><a href="pinpai.php">品牌介绍</a></li>
-                <li><a href="new.php">新闻动态</a></li>
+<!--                <li><a href="new.php">新闻动态</a></li>-->
                 <li><a href="concat.php">联系我们</a></li>
               </ul>
           </div>
@@ -104,7 +104,7 @@ if (!$tdk_info['success']) {
                 </div>
                 <div class="ixpro_des">
                     <h1><?php echo $pic_info->title ?></h1>
-                    <p><?php echo $pic_info->text?></p>
+                    <p><?php echo $pic_info->text?></p>xi
                 </div>
                 <div class="ixpro_img">
                     <img src=<?php echo $pic_info->img_url?> >
@@ -165,133 +165,133 @@ if (!$tdk_info['success']) {
   </div>
 </div>
 <!-- 新闻动态 -->
-<div class="ixnew container-fluid">
-    <div class="ixnew_nr container">
-      <div class="tit">
-        <h1>新闻动态</h1>
-        <p>NEWS</p>
-      </div>
-
-      <div class="new_cont">
-          <div class="new_lt fl">
-            <a href="#">
-              <div class="ovh">
-                <img src="images/104414.png">
-              </div>
-              <div class="imp_new">
-                <h1>CEO就新版本发布发表重要讲话</h1>
-                <div class="imp_area">
-                    <div class="imp_area_lt fl">
-                      <h2>2020</h2>
-                      <p>07-25</p>
-                    </div>
-                    <div class="imp_area_rt fl">
-                      <p>这是一段新闻介绍新闻介绍新闻介绍这是一段新闻介绍新闻介绍新闻介绍这是一段新闻介绍新闻介绍</p>
-                    </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="new_rt fr">
-              <ul>
-                <li>
-                  <a href="#">
-                    <div class="nwrt_a fl">
-                       <h2>2020</h2>
-                       <p>06-25</p>
-                    </div>
-                    <div class="nwrt_b fl">
-                        <h2>CEO就新版本发布发表重要讲话</h2>
-                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="nwrt_a fl">
-                       <h2>2020</h2>
-                       <p>06-25</p>
-                    </div>
-                    <div class="nwrt_b fl">
-                        <h2>CEO就新版本发布发表重要讲话</h2>
-                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="nwrt_a fl">
-                       <h2>2020</h2>
-                       <p>06-25</p>
-                    </div>
-                    <div class="nwrt_b fl">
-                        <h2>CEO就新版本发布发表重要讲话</h2>
-                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="nwrt_a fl">
-                       <h2>2020</h2>
-                       <p>06-25</p>
-                    </div>
-                    <div class="nwrt_b fl">
-                        <h2>CEO就新版本发布发表重要讲话</h2>
-                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <div class="nwrt_a fl">
-                       <h2>2020</h2>
-                       <p>06-25</p>
-                    </div>
-                    <div class="nwrt_b fl">
-                        <h2>CEO就新版本发布发表重要讲话</h2>
-                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-          </div>
-      </div>
-    </div>
-</div>
+<!-- <div class="ixnew container-fluid"> -->
+<!--    <div class="ixnew_nr container">-->
+<!--      <div class="tit">-->
+<!--        <h1>新闻动态</h1>-->
+<!--        <p>NEWS</p>-->
+<!--      </div>-->
+<!---->
+<!--      <div class="new_cont">-->
+<!--          <div class="new_lt fl">-->
+<!--            <a href="#">-->
+<!--              <div class="ovh">-->
+<!--                <img src="images/104414.png">-->
+<!--              </div>-->
+<!--              <div class="imp_new">-->
+<!--                <h1>CEO就新版本发布发表重要讲话</h1>-->
+<!--                <div class="imp_area">-->
+<!--                    <div class="imp_area_lt fl">-->
+<!--                      <h2>2020</h2>-->
+<!--                      <p>07-25</p>-->
+<!--                    </div>-->
+<!--                    <div class="imp_area_rt fl">-->
+<!--                      <p>这是一段新闻介绍新闻介绍新闻介绍这是一段新闻介绍新闻介绍新闻介绍这是一段新闻介绍新闻介绍</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--          <div class="new_rt fr">-->
+<!--              <ul>-->
+<!--                <li>-->
+<!--                  <a href="#">-->
+<!--                    <div class="nwrt_a fl">-->
+<!--                       <h2>2020</h2>-->
+<!--                       <p>06-25</p>-->
+<!--                    </div>-->
+<!--                    <div class="nwrt_b fl">-->
+<!--                        <h2>CEO就新版本发布发表重要讲话</h2>-->
+<!--                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>-->
+<!--                    </div>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="#">-->
+<!--                    <div class="nwrt_a fl">-->
+<!--                       <h2>2020</h2>-->
+<!--                       <p>06-25</p>-->
+<!--                    </div>-->
+<!--                    <div class="nwrt_b fl">-->
+<!--                        <h2>CEO就新版本发布发表重要讲话</h2>-->
+<!--                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>-->
+<!--                    </div>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="#">-->
+<!--                    <div class="nwrt_a fl">-->
+<!--                       <h2>2020</h2>-->
+<!--                       <p>06-25</p>-->
+<!--                    </div>-->
+<!--                    <div class="nwrt_b fl">-->
+<!--                        <h2>CEO就新版本发布发表重要讲话</h2>-->
+<!--                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>-->
+<!--                    </div>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="#">-->
+<!--                    <div class="nwrt_a fl">-->
+<!--                       <h2>2020</h2>-->
+<!--                       <p>06-25</p>-->
+<!--                    </div>-->
+<!--                    <div class="nwrt_b fl">-->
+<!--                        <h2>CEO就新版本发布发表重要讲话</h2>-->
+<!--                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>-->
+<!--                    </div>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                  <a href="#">-->
+<!--                    <div class="nwrt_a fl">-->
+<!--                       <h2>2020</h2>-->
+<!--                       <p>06-25</p>-->
+<!--                    </div>-->
+<!--                    <div class="nwrt_b fl">-->
+<!--                        <h2>CEO就新版本发布发表重要讲话</h2>-->
+<!--                        <p>这是一段新闻介绍新闻介绍新闻介绍这是一段…</p>-->
+<!--                    </div>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!-- 活动案例 -->
-<div class="ixcase container-fluid">
-    <div class="ix_case container">
-      <div class="tit">
-        <h1>活动案例</h1>
-        <p>CASE</p>
-      </div>
-
-      <div class="swiper-container anli">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="case_cont">
-                <div class="ix_case_lt fl wow fadeInDown">
-                    <p>这是一段新闻介绍新闻介绍新闻介绍1，这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍</p>
-                    <p>这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍</p>
-                </div>
-                <div class="ix_case_rt fr wow fadeInUp">
-                    <img src="images/2259.png">
-                </div>
-              </div>
-            </div>
-
-        </div>
+<!-- <div class="ixcase container-fluid"> -->
+<!--    <div class="ix_case container">-->
+<!--      <div class="tit">-->
+<!--        <h1>活动案例</h1>-->
+<!--        <p>CASE</p>-->
+<!--      </div>-->
+<!---->
+<!--      <div class="swiper-container anli">-->
+<!--        <div class="swiper-wrapper">-->
+<!--            <div class="swiper-slide">-->
+<!--              <div class="case_cont">-->
+<!--                <div class="ix_case_lt fl wow fadeInDown">-->
+<!--                    <p>这是一段新闻介绍新闻介绍新闻介绍1，这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍</p>-->
+<!--                    <p>这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍，这是一段新闻介绍新闻介绍新闻介绍</p>-->
+<!--                </div>-->
+<!--                <div class="ix_case_rt fr wow fadeInUp">-->
+<!--                    <img src="images/2259.png">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!---->
+<!--        </div>-->
         <!-- Add Arrows -->
-        <div class="anli_tog">
-          <div class="anli_tog_prev"><img src="images/829.png"></div>
-          <div class="anli_tog_next"><img src="images/4732.png"></div>
-        </div>
-    </div>
-
-
-
-    </div>
+<!--        <div class="anli_tog">-->
+<!--          <div class="anli_tog_prev"><img src="images/829.png"></div>-->
+<!--          <div class="anli_tog_next"><img src="images/4732.png"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!---->
+<!---->
+<!--    </div>-->
 </div>
 <!-- 服务客户 -->
 <div class="ixservice container-fluid">
@@ -314,11 +314,11 @@ if (!$tdk_info['success']) {
     <div class="ix_ewm">
         <ul>
           <li>
-            <img src="images/728.png">
+            <img src="images/gongzhonghao.png">
             <p>扫码关注公众号</p>
           </li>
           <li>
-            <img src="images/729.jpg" style="width: 194px;height: 196px;">
+            <img src="images/729.jpg">
             <p>扫码立即使用</p>
           </li>
         </ul>
@@ -347,7 +347,7 @@ if (!$tdk_info['success']) {
         <ul>
           <li><p>产品</p></li>
           <li><a href="#">产品介绍</a></li>
-          <li><a href="#">新闻动态</a></li>
+<!--          <li><a href="#">新闻动态</a></li>-->
           <li><a href="#">服务品牌</a></li>
         </ul>
           <ul>

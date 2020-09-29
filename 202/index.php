@@ -181,41 +181,41 @@ if (!$tdk_info['success']) {
 </div>
 
 <!-- 新闻动态 -->
-<div class="newdt container-fluid">
-   <div class="newdt_tit  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-       <h1>新闻动态</h1>
-       <p>NEWS</p>
-   </div>
-   <div class="newdt_ct container">
-       <ul>
-         <li>
-           <div class="newnr">
-               <div class="ovh">
-                 <img src="images/sfe.png" alt="">
-               </div>
-               <p>CEO2020年年度目标的发言年度目标的发言</p>
-           </div>
-         </li>
-         <li>
-           <div class="newnr">
-               <div class="ovh">
-                 <img src="images/sfe.png" alt="">
-               </div>
-               <p>CEO2020年年度目标的发言年度目标的发言</p>
-           </div>
-         </li>
-         <li>
-           <div class="newnr">
-               <div class="ovh">
-                 <img src="images/sfe.png" alt="">
-               </div>
-               <p>CEO2020年年度目标的发言年度目标的发言</p>
-           </div>
-         </li>
-
-       </ul>
-   </div>
-</div>
+<!--<div class="newdt container-fluid">-->
+<!--   <div class="newdt_tit  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">-->
+<!--       <h1>新闻动态</h1>-->
+<!--       <p>NEWS</p>-->
+<!--   </div>-->
+<!--   <div class="newdt_ct container">-->
+<!--       <ul>-->
+<!--         <li>-->
+<!--           <div class="newnr">-->
+<!--               <div class="ovh">-->
+<!--                 <img src="images/sfe.png" alt="">-->
+<!--               </div>-->
+<!--               <p>CEO2020年年度目标的发言年度目标的发言</p>-->
+<!--           </div>-->
+<!--         </li>-->
+<!--         <li>-->
+<!--           <div class="newnr">-->
+<!--               <div class="ovh">-->
+<!--                 <img src="images/sfe.png" alt="">-->
+<!--               </div>-->
+<!--               <p>CEO2020年年度目标的发言年度目标的发言</p>-->
+<!--           </div>-->
+<!--         </li>-->
+<!--         <li>-->
+<!--           <div class="newnr">-->
+<!--               <div class="ovh">-->
+<!--                 <img src="images/sfe.png" alt="">-->
+<!--               </div>-->
+<!--               <p>CEO2020年年度目标的发言年度目标的发言</p>-->
+<!--           </div>-->
+<!--         </li>-->
+<!---->
+<!--       </ul>-->
+<!--   </div>-->
+<!--</div>-->
 
 <div class="weyy container-fluid">
     <div class="weyy_nr container">
@@ -262,13 +262,13 @@ if (!$tdk_info['success']) {
 <div class="footers container-fluid">
   <div class="foot container">
       <div class="foot_a fl">
-          <img src="images/logo.png" alt="">
+          <img style='width:150px;height: auto;' src="images/logo.png" alt="">
           <p><a href="http://www.staffhome.cn">www.staffhome.cn</a></p>
       </div>
       <div class="foot_b fl">
           <p>快接入口</p>
           <ul>
-            <li><a href="#">首页</a></li>
+            <li><a href="index.php">首页</a></li>
             <li><a href="#">企业产品</a></li>
             <li><a href="#">线下服务</a></li>
             <li><a href="#">关于我们</a></li>
@@ -294,7 +294,7 @@ if (!$tdk_info['success']) {
 </div>
 <div class="ftcopy container-fluid">
     <div class="copy container">
-        <p>沪备案号：XXXXXXXXXXXXXXXXXXX </p>
+        <p><a style="color: black;" href="http://www.beian.gov.cn/" target="_blank">备案号：粤ICP备2020096223号</a> </p>
     </div>
 </div>
 

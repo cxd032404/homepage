@@ -231,28 +231,28 @@
                   <div class="gax_mz">
                     <img src="images/c1.png">
                     <h2>高效</h2>
-                    <p>精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集</p>
+                    <p></p>
                   </div>
                 </li>
                 <li class=" wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".5s">
                   <div class="gax_mz">
                     <img src="images/c2.png">
                     <h2>智能</h2>
-                    <p>精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集</p>
+                    <p></p>
                   </div>
                 </li>
                 <li class=" wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".5s">
                   <div class="gax_mz">
                     <img src="images/c3.png">
                     <h2>稳定</h2>
-                    <p>精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集</p>
+                    <p>></p>
                   </div>
                 </li>
                 <li class=" wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".5s">
                   <div class="gax_mz">
                     <img src="images/c4.png">
                     <h2>精确</h2>
-                    <p>精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集精准采集</p>
+                    <p></p>
                   </div>
                 </li>
               </ul>
@@ -335,48 +335,48 @@
 </div>
 
 <!-- 、、、new -->
-<div class="newss container-fluid">
-  <div class="new_tit">
-    <h2>新闻资讯</h2>
-  </div>
-  <div class="ixnwlist container">
-      <ul>
-        <li class="wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".6s">
-          <a href="">
-            <div class="ovh">
-              <img src="images/imagffe.png" alt="">
-            </div>
-            <h2>
-              CEO2020年年度目标的发言年度目标的发言
-            </h2>
-            <p>2020 - 07 - 27</p>
-          </a>
-        </li>
-        <li  class="wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".6s">
-          <a href="">
-            <div class="ovh">
-              <img src="images/imagffe.png" alt="">
-            </div>
-            <h2>
-              CEO2020年年度目标的发言年度目标的发言
-            </h2>
-            <p>2020 - 07 - 27</p>
-          </a>
-        </li>
-        <li   class="wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".6s">
-          <a href="">
-            <div class="ovh">
-              <img src="images/imagffe.png" alt="">
-            </div>
-            <h2>
-              CEO2020年年度目标的发言年度目标的发言
-            </h2>
-            <p>2020 - 07 - 27</p>
-          </a>
-        </li>
-      </ul>
-  </div>
-</div>
+<!--<div class="newss container-fluid">-->
+<!--  <div class="new_tit">-->
+<!--    <h2>新闻资讯</h2>-->
+<!--  </div>-->
+<!--  <div class="ixnwlist container">-->
+<!--      <ul>-->
+<!--        <li class="wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".6s">-->
+<!--          <a href="">-->
+<!--            <div class="ovh">-->
+<!--              <img src="images/imagffe.png" alt="">-->
+<!--            </div>-->
+<!--            <h2>-->
+<!--              CEO2020年年度目标的发言年度目标的发言-->
+<!--            </h2>-->
+<!--            <p>2020 - 07 - 27</p>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li  class="wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".6s">-->
+<!--          <a href="">-->
+<!--            <div class="ovh">-->
+<!--              <img src="images/imagffe.png" alt="">-->
+<!--            </div>-->
+<!--            <h2>-->
+<!--              CEO2020年年度目标的发言年度目标的发言-->
+<!--            </h2>-->
+<!--            <p>2020 - 07 - 27</p>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li   class="wow fadeInUp"  data-wow-duration="1s" data-wow-delay=".6s">-->
+<!--          <a href="">-->
+<!--            <div class="ovh">-->
+<!--              <img src="images/imagffe.png" alt="">-->
+<!--            </div>-->
+<!--            <h2>-->
+<!--              CEO2020年年度目标的发言年度目标的发言-->
+<!--            </h2>-->
+<!--            <p>2020 - 07 - 27</p>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--  </div>-->
+<!--</div>-->
 
 <!-- youyu -->
 <div class="youyus container-fluid">

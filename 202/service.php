@@ -194,7 +194,7 @@ if (!$tdk_info['success']) {
             </div>
             <div class="tuan_s">
                 <h1>团体</h1>
-                <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
+                <p></p>
             </div>
           </div>
         </li>
@@ -205,7 +205,7 @@ if (!$tdk_info['success']) {
           </div>
           <div class="tuan_s">
               <h1>中小企业</h1>
-              <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
+              <p></p>
           </div>
         </div>
         </li>
@@ -216,7 +216,7 @@ if (!$tdk_info['success']) {
             </div>
             <div class="tuan_s">
                 <h1>大型企业</h1>
-                <p>描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述</p>
+                <p></p>
             </div>
           </div>
         </li>
@@ -259,7 +259,7 @@ if (!$tdk_info['success']) {
 </div>
 <div class="ftcopy container-fluid">
     <div class="copy container">
-        <p>沪备案号：XXXXXXXXXXXXXXXXXXX </p>
+        <p><a style="color: black;" href="http://www.beian.gov.cn/" target="_blank">备案号：粤ICP备2020096223号</a> </p>
     </div>
 </div>
 

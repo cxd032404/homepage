@@ -62,7 +62,7 @@ if (!$tdk_info['success']) {
                 <li><a href=<?php echo $config['jianbu_domian'] ?>>健步走</a></li>
                 <li><a href=<?php echo $config['club_domian'] ?>>俱乐部</a></li>
               <li><a href="pinpai.php">品牌介绍</a></li>
-              <li><a href="new.php">新闻动态</a></li>
+<!--              <li><a href="new.php">新闻动态</a></li>-->
               <li><a href="concat.php">联系我们</a></li>
             </ul>
         </div>
@@ -147,7 +147,7 @@ if (!$tdk_info['success']) {
         <ul>
           <li><p>产品</p></li>
           <li><a href="#">产品介绍</a></li>
-          <li><a href="#">新闻动态</a></li>
+<!--          <li><a href="#">新闻动态</a></li>-->
           <li><a href="#">服务品牌</a></li>
         </ul>
           <ul>
